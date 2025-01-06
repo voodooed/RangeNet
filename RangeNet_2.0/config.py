@@ -9,7 +9,7 @@ import os
     #Concatenated image in dataset.py 
 
 Trial_Num = "T1" #Change
-Trial_Path = f"Objective 3/RangeNet++/Output_2.0/{Trial_Num}" #Change
+Trial_Path = f"Objective_3/RangeNet++/MiX_Data_Training/Output_2.0/{Trial_Num}" #Change
 if not os.path.exists(Trial_Path):
     os.makedirs(Trial_Path)
 
@@ -24,7 +24,7 @@ NUM_EPOCHS = 150
 NUM_WORKERS = 4
 
 out_channels = 20
-in_channels = 4 #Change Accordingly
+in_channels = 5 #Change Accordingly
 
 
 Loss_Plot_Path = f"{Trial_Path}/{Trial_Num}_loss_plot.png"
@@ -36,7 +36,7 @@ Checkpoint_Path = f"{Trial_Path}/{Trial_Num}_model.pth.tar"
 PIN_MEMORY = True
 LOAD_MODEL = False
 
-base_path = "Kitti_Downstream_Task_Data/"
+base_path = "Kiiti_Voxel_Mix_Downstream_task_Data/"
 
 TRAIN_Lidar_DIR = base_path + "Train/train_lidar_depth"
 TRAIN_Intensity_DIR = base_path + "Train/train_lidar_intensity" 
@@ -63,5 +63,4 @@ TEST_X_DIR = base_path + "Test/test_lidar_x"
 TEST_Y_DIR = base_path + "Test/test_lidar_y"
 TEST_Z_DIR = base_path + "Test/test_lidar_z"
 
-#Weights
 

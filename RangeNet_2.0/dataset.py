@@ -73,8 +73,8 @@ class KittiDataset(Dataset):
 
 
         
-        concatenated_img = torch.cat((x,y,z,lidar), dim=0) #T1 #in_channels=4
-        #concatenated_img = torch.cat((x,y,z,lidar, intensity), dim=0) #T2/3 #in_channels=5
+        #concatenated_img = torch.cat((x,y,z,lidar), dim=0) #T1 #in_channels=4
+        concatenated_img = torch.cat((x,y,z,lidar,intensity), dim=0) #T2/3 #in_channels=5
       
 
         return concatenated_img,label
